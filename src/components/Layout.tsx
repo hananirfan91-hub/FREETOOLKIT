@@ -115,7 +115,7 @@ export default function Layout() {
 
       <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
             <div className="md:col-span-2">
               <div className="flex items-center gap-2 text-white font-bold text-xl mb-4 tracking-tight">
                 <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-1.5 rounded-lg">
@@ -143,6 +143,17 @@ export default function Layout() {
                 <li><Link to="/password-generator" className="hover:text-indigo-400 transition-colors">Password Generator</Link></li>
                 <li><Link to="/text-case-converter" className="hover:text-indigo-400 transition-colors">Case Converter</Link></li>
                 <li><Link to="/word-counter" className="hover:text-indigo-400 transition-colors">Word Counter</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Our Network</h3>
+              <ul className="space-y-3 text-sm">
+                <li><a href="https://gardenlayouttips.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors">Garden Layout Tips</a></li>
+                <li><a href="https://hidigitalgroup.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors">Hi Digital Group</a></li>
+                <li><a href="https://lahoregirlshostel.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors">Lahore Girls Hostel</a></li>
+                <li><a href="https://hanzorstore.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors">Hanzor Store</a></li>
+                <li><a href="https://hananirfanportfolio.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors">Hanan Irfan Portfolio</a></li>
+                <li><a href="https://caesar2026.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-400 transition-colors">Caesar 2026</a></li>
               </ul>
             </div>
           </div>
