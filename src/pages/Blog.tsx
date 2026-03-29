@@ -42,6 +42,19 @@ export default function Blog() {
         <title>Blog - FreeToolKit | Guides, Tips & Tutorials</title>
         <meta name="description" content="Read the latest guides, tips, and tutorials on web development, image optimization, and productivity from the FreeToolKit team." />
         <link rel="canonical" href="https://freetoolshub1.vercel.app/blog" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://freetoolshub1.vercel.app/blog" />
+        <meta property="og:title" content="Blog - FreeToolKit | Guides, Tips & Tutorials" />
+        <meta property="og:description" content="Read the latest guides, tips, and tutorials on web development, image optimization, and productivity from the FreeToolKit team." />
+        <meta property="og:site_name" content="FreeToolKit" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://freetoolshub1.vercel.app/blog" />
+        <meta name="twitter:title" content="Blog - FreeToolKit | Guides, Tips & Tutorials" />
+        <meta name="twitter:description" content="Read the latest guides, tips, and tutorials on web development, image optimization, and productivity from the FreeToolKit team." />
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

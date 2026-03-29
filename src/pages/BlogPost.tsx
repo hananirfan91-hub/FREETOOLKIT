@@ -26,6 +26,21 @@ export default function BlogPost() {
         <title>{post.title} - FreeToolKit Blog</title>
         <meta name="description" content={post.excerpt} />
         <link rel="canonical" href={`https://freetoolshub1.vercel.app/blog/${post.slug}`} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://freetoolshub1.vercel.app/blog/${post.slug}`} />
+        <meta property="og:title" content={`${post.title} - FreeToolKit Blog`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:site_name" content="FreeToolKit" />
+        <meta property="article:published_time" content={post.date} />
+        <meta property="article:author" content={post.author} />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={`https://freetoolshub1.vercel.app/blog/${post.slug}`} />
+        <meta name="twitter:title" content={`${post.title} - FreeToolKit Blog`} />
+        <meta name="twitter:description" content={post.excerpt} />
       </Helmet>
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

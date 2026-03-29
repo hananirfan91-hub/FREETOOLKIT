@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Wrench, Menu, X, ChevronDown } from 'lucide-react';
+import { Wrench, Menu, X, ChevronDown, Instagram, Facebook, Youtube } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export default function Layout() {
@@ -146,9 +146,27 @@ export default function Layout() {
               </ul>
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-slate-800 text-sm text-center flex flex-col md:flex-row justify-between items-center gap-4">
-            <p>&copy; {new Date().getFullYear()} FreeToolKit. All rights reserved.</p>
-            <div className="flex gap-6">
+          <div className="mt-12 pt-8 border-t border-slate-800 text-sm flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+              <p>&copy; {new Date().getFullYear()} FreeToolKit. All rights reserved.</p>
+              <div className="flex gap-4">
+                <a href="https://instagram.com/tearswithhanan/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors" aria-label="Instagram">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="https://tiktok.com/@pathan_x_babarian565" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors" aria-label="TikTok">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                  </svg>
+                </a>
+                <a href="https://facebook.com/HananIrfan001" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors" aria-label="Facebook">
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a href="https://www.youtube.com/@ancientmystery-0" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors" aria-label="YouTube">
+                  <Youtube className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-wrap justify-center gap-6">
               <Link to="/blog" className="hover:text-white transition-colors">Blog</Link>
               <Link to="/" className="hover:text-white transition-colors">About</Link>
               <Link to="/" className="hover:text-white transition-colors">Contact</Link>

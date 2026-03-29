@@ -11,7 +11,11 @@ import {
   Link as LinkIcon, 
   KeyRound, 
   Hash, 
-  Palette 
+  Palette,
+  Zap,
+  ShieldCheck,
+  CheckCircle,
+  HelpCircle
 } from 'lucide-react';
 
 export default function Home() {
@@ -89,11 +93,11 @@ export default function Home() {
       color: 'bg-cyan-50',
     },
     {
-      id: 'color-converter',
+      id: 'color-picker',
       name: 'Color Picker & Converter',
       description: 'Pick colors and convert between HEX, RGB, and HSL formats with a visual interface.',
       icon: <Palette className="w-8 h-8 text-teal-500" />,
-      path: '/color-converter',
+      path: '/color-picker',
       color: 'bg-teal-50',
     },
   ];
@@ -105,6 +109,19 @@ export default function Home() {
         <meta name="description" content="Access 10+ free online tools including JSON Formatter, Base64 Encoder, Image Compressor, Password Generator, and more. 100% free, no signup, no login required." />
         <meta name="keywords" content="free online tools, no signup tools, no login tools, json formatter online free, base64 encode decode online free, compress image online free, resize image online free, uppercase to lowercase converter free, word counter online free, url encode decode online free, strong password generator free, uuid generator online free, hex to rgb converter free" />
         <link rel="canonical" href="https://freetoolshub1.vercel.app/" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://freetoolshub1.vercel.app/" />
+        <meta property="og:title" content="FreeToolKit - 100% Free Online Tools | No Signup, No Login" />
+        <meta property="og:description" content="Access 10+ free online tools including JSON Formatter, Base64 Encoder, Image Compressor, Password Generator, and more. 100% free, no signup, no login required." />
+        <meta property="og:site_name" content="FreeToolKit" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://freetoolshub1.vercel.app/" />
+        <meta name="twitter:title" content="FreeToolKit - 100% Free Online Tools | No Signup, No Login" />
+        <meta name="twitter:description" content="Access 10+ free online tools including JSON Formatter, Base64 Encoder, Image Compressor, Password Generator, and more. 100% free, no signup, no login required." />
       </Helmet>
 
       {/* Hero Section */}
@@ -168,6 +185,87 @@ export default function Home() {
               </Link>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-white border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Choose FreeToolKit?</h2>
+            <p className="text-lg text-slate-600">
+              We built FreeToolKit to be the fastest, most reliable, and most secure collection of utilities on the web.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="flex flex-col items-center text-center p-6">
+              <div className="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center mb-6">
+                <Zap className="w-8 h-8 text-indigo-600" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Lightning Fast</h3>
+              <p className="text-slate-600">
+                All our tools run directly in your browser. No waiting for server uploads, no loading screens. Just instant results.
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center text-center p-6">
+              <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
+                <ShieldCheck className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">100% Secure & Private</h3>
+              <p className="text-slate-600">
+                We respect your privacy. Your data never leaves your device. Everything is processed locally on your machine.
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center text-center p-6">
+              <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mb-6">
+                <CheckCircle className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Completely Free</h3>
+              <p className="text-slate-600">
+                No paywalls, no premium tiers, no hidden fees, and absolutely no signup required. Free forever.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-200 mb-6">
+              <HelpCircle className="w-8 h-8 text-slate-600" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-slate-600">
+              Everything you need to know about FreeToolKit and how it works.
+            </p>
+          </div>
+          
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Are these tools really 100% free?</h3>
+              <p className="text-slate-600">Yes! Every single tool on FreeToolKit is completely free to use. There are no premium versions, no hidden fees, and no usage limits.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Do I need to create an account?</h3>
+              <p className="text-slate-600">No. We believe in removing friction. You never have to sign up, log in, or provide your email address to use any of our utilities.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Is my data safe when using these tools?</h3>
+              <p className="text-slate-600">Absolutely. Our tools are built using modern web technologies that process your data locally in your browser. Your files, text, and images are never uploaded to our servers.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Can I use these tools on my mobile phone?</h3>
+              <p className="text-slate-600">Yes, FreeToolKit is fully responsive and optimized for all devices. You can use our tools seamlessly on your desktop, tablet, or smartphone.</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
