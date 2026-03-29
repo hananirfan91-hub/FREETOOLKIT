@@ -41,6 +41,7 @@ export default function Blog() {
       <Helmet>
         <title>Blog - FreeToolKit | Guides, Tips & Tutorials</title>
         <meta name="description" content="Read the latest guides, tips, and tutorials on web development, image optimization, and productivity from the FreeToolKit team." />
+        <link rel="canonical" href="https://freetoolshub1.vercel.app/blog" />
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

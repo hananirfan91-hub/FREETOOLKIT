@@ -104,6 +104,7 @@ export default function Home() {
         <title>FreeToolKit - 100% Free Online Tools | No Signup, No Login</title>
         <meta name="description" content="Access 10+ free online tools including JSON Formatter, Base64 Encoder, Image Compressor, Password Generator, and more. 100% free, no signup, no login required." />
         <meta name="keywords" content="free online tools, no signup tools, no login tools, json formatter online free, base64 encode decode online free, compress image online free, resize image online free, uppercase to lowercase converter free, word counter online free, url encode decode online free, strong password generator free, uuid generator online free, hex to rgb converter free" />
+        <link rel="canonical" href="https://freetoolshub1.vercel.app/" />
       </Helmet>
 
       {/* Hero Section */}

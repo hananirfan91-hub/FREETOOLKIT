@@ -27,7 +27,7 @@ export default function Layout() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans">
+    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans overflow-x-hidden w-full">
       <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
@@ -53,7 +53,7 @@ export default function Layout() {
                 
                 {/* Mega Menu Dropdown */}
                 <div 
-                  className={`absolute top-full -left-48 w-[600px] bg-white border border-slate-200 shadow-2xl rounded-xl p-6 transition-all duration-200 ${isToolsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'}`}
+                  className={`absolute top-full right-0 w-[480px] bg-white border border-slate-200 shadow-2xl rounded-xl p-6 transition-all duration-200 ${isToolsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-2'}`}
                   onMouseEnter={() => setIsToolsOpen(true)}
                   onMouseLeave={() => setIsToolsOpen(false)}
                 >
@@ -93,7 +93,7 @@ export default function Layout() {
             <Link to="/blog" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-700">Blog</Link>
             <div className="pt-2 pb-1 border-t border-slate-700">
               <div className="px-3 text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">All Tools</div>
-              <div className="mt-2 space-y-1 max-h-64 overflow-y-auto">
+              <div className="mt-2 space-y-1 pb-4">
                 {tools.map(tool => (
                   <Link 
                     key={tool.path} 

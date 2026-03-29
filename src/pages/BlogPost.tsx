@@ -25,6 +25,7 @@ export default function BlogPost() {
       <Helmet>
         <title>{post.title} - FreeToolKit Blog</title>
         <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={`https://freetoolshub1.vercel.app/blog/${post.slug}`} />
       </Helmet>
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -79,6 +79,7 @@ export default function ToolPageLayout({
   // Get 4 random internal links that are not the current page
   const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
   const randomLinks = INTERNAL_LINKS.filter(link => link.path !== currentPath).slice(0, 4);
+  const canonicalUrl = `https://freetoolshub1.vercel.app${currentPath}`;
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -86,6 +87,7 @@ export default function ToolPageLayout({
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+        <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>
