@@ -1,17 +1,44 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { motion } from 'motion/react';
-import { Wrench, Menu, X, ChevronDown, Instagram, Facebook, Youtube } from 'lucide-react';
+import { motion, useScroll, useSpring } from 'motion/react';
+import { Wrench, Menu, X, ChevronDown, Instagram, Facebook, Youtube, Share2 } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import Banner from './Banner';
+import CountdownWidget from './CountdownWidget';
 
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const location = useLocation();
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   useEffect(() => {
     setIsMenuOpen(false);
     setIsToolsOpen(false);
   }, [location]);
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'FreeToolKit - 100% Free Online Tools',
+          text: 'Check out these awesome free developer and utility tools!',
+          url: window.location.href,
+        });
+      } catch (err) {
+        console.log('Error sharing:', err);
+      }
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+      alert('Link copied to clipboard!');
+    }
+  };
 
   const tools = [
     { name: 'JSON Formatter', path: '/json-formatter' },
@@ -28,6 +55,20 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans overflow-x-hidden w-full">
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 origin-left z-[60]"
+        style={{ scaleX }}
+      />
+      <Helmet>
+        <title>FreeToolKit - 100% Free Online Tools | No Signup</title>
+        <meta name="description" content="A premium collection of 100% free online tools designed to help developers, designers, and everyday users. No signup, no login required." />
+        <meta name="keywords" content="free online tools, developer tools, utility tools, no signup tools, free web tools" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="FreeToolKit" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <html lang="en" />
+      </Helmet>
+      <Banner />
       <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
@@ -39,8 +80,9 @@ export default function Layout() {
             </Link>
             
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8 items-center">
+            <nav className="hidden md:flex space-x-6 items-center">
               <Link to="/" className="text-slate-300 hover:text-white font-medium transition-colors">Home</Link>
+              <Link to="/about" className="text-slate-300 hover:text-white font-medium transition-colors">About</Link>
               <Link to="/blog" className="text-slate-300 hover:text-white font-medium transition-colors">Blog</Link>
               <div className="relative group">
                 <button 
@@ -70,14 +112,22 @@ export default function Layout() {
                   </div>
                 </div>
               </div>
+              <button 
+                onClick={handleShare} 
+                className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-colors text-sm shadow-sm"
+              >
+                <Share2 className="w-4 h-4" /> Share
+              </button>
             </nav>
 
             {/* Mobile menu button */}
             <button 
               className="md:hidden text-slate-300 hover:text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-expanded={isMenuOpen}
+              aria-label="Toggle navigation menu"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -87,9 +137,10 @@ export default function Layout() {
           <motion.div 
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
-            className="md:hidden bg-slate-800 border-b border-slate-700 px-4 pt-2 pb-4 space-y-1"
+            className="md:hidden bg-slate-800 border-b border-slate-700 px-4 pt-4 pb-4 space-y-1"
           >
             <Link to="/" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-700">Home</Link>
+            <Link to="/about" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-700">About</Link>
             <Link to="/blog" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-slate-700">Blog</Link>
             <div className="pt-2 pb-1 border-t border-slate-700">
               <div className="px-3 text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">All Tools</div>
@@ -104,6 +155,14 @@ export default function Layout() {
                   </Link>
                 ))}
               </div>
+            </div>
+            <div className="px-3 pb-4">
+              <button 
+                onClick={handleShare} 
+                className="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-colors text-sm shadow-sm"
+              >
+                <Share2 className="w-4 h-4" /> Share App
+              </button>
             </div>
           </motion.div>
         )}
@@ -179,14 +238,14 @@ export default function Layout() {
             </div>
             <div className="flex flex-wrap justify-center gap-6">
               <Link to="/blog" className="hover:text-white transition-colors">Blog</Link>
-              <Link to="/" className="hover:text-white transition-colors">About</Link>
-              <Link to="/" className="hover:text-white transition-colors">Contact</Link>
-              <Link to="/" className="hover:text-white transition-colors">Privacy Policy</Link>
-              <Link to="/" className="hover:text-white transition-colors">Terms of Service</Link>
+              <Link to="/about" className="hover:text-white transition-colors">About</Link>
+              <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>
       </footer>
+      <CountdownWidget />
     </div>
   );
 }
