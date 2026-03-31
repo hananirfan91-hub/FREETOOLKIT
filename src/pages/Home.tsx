@@ -122,6 +122,35 @@ export default function Home() {
         <meta name="twitter:url" content="https://freetoolshub1.vercel.app/" />
         <meta name="twitter:title" content="FreeToolKit - 100% Free Online Tools | No Signup, No Login" />
         <meta name="twitter:description" content="Discover FreeToolKit's premium collection of 100% free online developer and utility tools. Format JSON, compress images, generate passwords, and more without signup." />
+
+        {/* Structured Data / JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "FreeToolKit",
+            "url": "https://freetoolshub1.vercel.app/",
+            "description": "A premium collection of 100% free online tools designed to help developers, designers, and everyday users.",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://freetoolshub1.vercel.app/?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": tools.map((tool, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "url": `https://freetoolshub1.vercel.app${tool.path}`,
+              "name": tool.name,
+              "description": tool.description
+            }))
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -272,53 +301,38 @@ export default function Home() {
       {/* Comprehensive Guide Section for SEO and Word Count */}
       <section className="py-20 bg-white border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-slate lg:prose-lg mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">Your Ultimate Toolkit for Developers and Creators</h2>
+          <article className="prose prose-slate lg:prose-lg mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">Your Go-To Suite of Free Online Utilities</h2>
             
             <p className="text-slate-600 mb-6 leading-relaxed">
-              In today's fast-paced digital landscape, having access to reliable, fast, and secure online tools is essential for developers, designers, writers, and everyday internet users. That is exactly why we created <strong>FreeToolKit</strong>. Our mission is to provide a comprehensive suite of premium-quality utilities that are completely free to use, without the hassle of creating accounts, remembering passwords, or dealing with intrusive advertisements.
+              We've all been there: you need to quickly format a messy JSON file, resize an image for a blog post, or generate a secure password, but every tool you find either wants you to create an account, pay a subscription, or upload your sensitive data to their servers. That's why we built <strong>FreeToolKit</strong>. We wanted a single place where developers, designers, and everyday users could access essential utilities instantly, without any of the hassle. Every tool here runs entirely in your web browser, meaning your data stays on your device, ensuring complete privacy and lightning-fast results.
             </p>
 
-            <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">A Suite of Developer Tools at Your Fingertips</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Developer Tools: Format, Encode, and Generate</h3>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              For software engineers and web developers, efficiency is key. Our platform offers a robust set of developer-focused utilities designed to streamline your coding workflow. Whether you need to quickly format and validate complex JSON data structures, safely encode or decode Base64 strings, or generate cryptographically secure UUIDs (Universally Unique Identifiers) for your database records, FreeToolKit has you covered. We also provide a seamless URL Encoder and Decoder to ensure your web links are perfectly formatted and safe for transmission across the internet.
+              When you're deep in code, you don't have time to mess around with clunky interfaces. Our <Link to="/json-formatter" className="text-indigo-600 hover:underline">JSON formatter and validator</Link> is designed to handle large payloads instantly, turning unreadable strings into a clean, collapsible tree. Need to handle data encoding? You can securely <Link to="/base64-encoder" className="text-indigo-600 hover:underline">encode and decode Base64 strings</Link> or safely parse URL parameters without worrying about your data being logged. We also offer a <Link to="/uuid-generator" className="text-indigo-600 hover:underline">UUID v4 generator</Link> for when you need universally unique identifiers on the fly.
             </p>
 
-            <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Optimize Your Digital Media Instantly</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Content & Design Utilities: Optimize and Analyze</h3>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              Content creators and web designers know the importance of optimized media. Heavy, unoptimized images can drastically slow down your website's loading speed, negatively impacting both user experience and search engine optimization (SEO) rankings. With our built-in Image Compressor and Image Resizer, you can effortlessly reduce file sizes while maintaining pristine image quality. Furthermore, our intuitive Color Picker and Converter allows designers to seamlessly translate color codes between HEX, RGB, and HSL formats, ensuring perfect brand consistency across all digital platforms.
+              Optimizing media for the web shouldn't require expensive software. Our <Link to="/image-compressor" className="text-indigo-600 hover:underline">free image compressor</Link> lets you shrink JPEG, PNG, and WebP files right in your browser, helping your website load faster without sacrificing quality. If you need to tweak dimensions, the <Link to="/image-resizer" className="text-indigo-600 hover:underline">image resizer</Link> makes cropping and scaling a breeze. For writers and marketers, our <Link to="/word-counter" className="text-indigo-600 hover:underline">word and character counter</Link> provides instant metrics to help you hit those strict character limits for social media or SEO meta descriptions.
             </p>
 
-            <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Everyday Utilities for Everyone</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Security First: Why Browser-Based Processing Matters</h3>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              FreeToolKit isn't just for technical professionals; it is built for everyone. Need to secure your online accounts? Our Strong Password Generator creates virtually uncrackable passwords using a mix of uppercase letters, lowercase letters, numbers, and special symbols. Working on an essay, blog post, or social media update? Our Word and Character Counter provides real-time statistics on your text, while our Text Case Converter allows you to instantly switch between UPPERCASE, lowercase, Title Case, and Sentence case with a single click.
+              The biggest advantage of FreeToolKit isn't just that it's free—it's how it works under the hood. By leveraging modern web technologies to process everything client-side, we offer benefits that traditional server-based tools simply can't match:
             </p>
-
-            <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Privacy and Security First</h3>
-            <p className="text-slate-600 mb-6 leading-relaxed">
-              We understand that when you use online tools, you are often working with sensitive data—whether it's proprietary code, personal images, or secure passwords. Unlike many other online tool platforms that upload your files to remote servers for processing, FreeToolKit leverages modern web technologies to process everything locally right inside your web browser. This client-side processing architecture guarantees that your data never leaves your device, providing you with absolute privacy, unparalleled security, and lightning-fast performance.
-            </p>
-
-            <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Why Client-Side Processing Matters</h3>
-            <p className="text-slate-600 mb-6 leading-relaxed">
-              When you use traditional online tools, your data is often uploaded to a remote server, processed, and then sent back to you. This approach introduces several significant risks and drawbacks. First, it compromises your privacy, as you are trusting a third party with your potentially sensitive information. Second, it relies heavily on your internet connection speed; uploading large images or massive JSON files can be incredibly slow and frustrating. Third, it poses a security risk, as data transmitted over the internet can potentially be intercepted.
-            </p>
-            <p className="text-slate-600 mb-6 leading-relaxed">
-              FreeToolKit eliminates all these issues by performing all operations directly within your web browser. When you compress an image, format JSON, or generate a password, the computation happens on your own device's processor. This means your files are never uploaded, your data remains completely private, and the tools operate at the maximum speed your device can handle, regardless of your internet connection. This modern approach to web applications ensures a safer, faster, and more reliable experience for every user.
-            </p>
-
-            <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">The Importance of Accessible Tools</h3>
-            <p className="text-slate-600 mb-6 leading-relaxed">
-              We believe that essential digital utilities should be accessible to everyone, without barriers. Many platforms hide their best features behind paywalls, require tedious account creation processes, or bombard users with intrusive advertisements that disrupt the workflow. FreeToolKit was built with a different philosophy. We are committed to providing a clean, distraction-free environment where you can get your work done quickly and efficiently. By removing the need for signups and logins, we ensure that you can access the tools you need the moment you need them.
-            </p>
-            <p className="text-slate-600 mb-6 leading-relaxed">
-              Whether you are a seasoned software developer debugging complex data structures, a student writing an essay and needing a quick word count, or a designer optimizing images for a new website launch, FreeToolKit is designed to be your go-to resource. Our intuitive interfaces make complex tasks simple, allowing you to focus on what truly matters: your creative and professional endeavors.
-            </p>
+            <ul className="text-slate-600 mb-6 leading-relaxed list-disc pl-6 space-y-2">
+              <li><strong>Absolute Privacy:</strong> Whether you're using our <Link to="/password-generator" className="text-indigo-600 hover:underline">strong password generator</Link> or formatting proprietary API data, your information never leaves your computer.</li>
+              <li><strong>Zero Wait Times:</strong> There are no upload or download progress bars. Processing happens at the speed of your own device.</li>
+              <li><strong>No File Size Limits:</strong> Because you aren't uploading files to a server, you aren't restricted by arbitrary upload caps.</li>
+              <li><strong>Always Available:</strong> Many of our tools will continue to function even if your internet connection drops after the page has loaded.</li>
+            </ul>
             
             <p className="text-slate-600 mb-6 leading-relaxed font-medium text-center mt-10">
-              Bookmark FreeToolKit today and experience the convenience of having a powerful, secure, and 100% free digital utility belt right in your browser.
+              Bookmark FreeToolKit today. It's the fast, secure, and completely free utility belt you'll actually want to use. No signup, no login—just tools that work.
             </p>
-          </div>
+          </article>
         </div>
       </section>
     </div>

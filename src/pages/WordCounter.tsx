@@ -109,10 +109,10 @@ export default function WordCounter() {
       seoIntro={
         <>
           <p className="mb-4">
-            Our <strong>word counter online</strong> is an essential free tool for writers, students, and SEO professionals. Whether you are writing an essay with a strict word limit, crafting the perfect tweet, or optimizing a meta description for search engines, knowing your exact character and word count is crucial.
+            Whether you are a student trying to hit a strict essay word limit, a marketer crafting the perfect tweet, or an SEO professional optimizing a meta description, knowing your exact character and word count is essential. Our browser-based word counter is the perfect free tool for these everyday writing tasks.
           </p>
           <p>
-            Using our <strong>word counter online free</strong> utility, you get real-time statistics as you type or paste your text. It instantly calculates words, characters (with and without spaces), sentences, paragraphs, and even estimates the reading time. Best of all, it operates 100% client-side, meaning your essays, articles, and private documents are never sent to a server. Enjoy fast, secure, and accurate counting with no signup required.
+            Using this utility, you get real-time statistics the moment you start typing or paste your text. It instantly calculates words, characters (both with and without spaces), sentences, paragraphs, and even estimates the reading time. Best of all, it operates 100% client-side. This means your private essays, articles, and confidential documents are never sent to a remote server. Enjoy fast, secure, and accurate counting with no signup required.
           </p>
         </>
       }

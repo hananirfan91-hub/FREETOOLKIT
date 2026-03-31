@@ -186,10 +186,10 @@ export default function ImageCompressor() {
       seoIntro={
         <>
           <p className="mb-4">
-            Need to <strong>compress image online free</strong>? Large, unoptimized images are the number one cause of slow website loading times, which can severely hurt your SEO rankings and user experience. Our free online image compressor solves this problem instantly.
+            Are your website pages loading slowly, or are you struggling to email a massive photo attachment? Large, unoptimized images are the primary cause of slow loading times, which can severely hurt your SEO rankings and frustrate users. Our browser-based image compressor solves this problem instantly without requiring you to download bulky desktop software.
           </p>
           <p>
-            With our <strong>compress image online free</strong> tool, you can drastically reduce the file size of your JPEGs, PNGs, and WebP images without noticeable quality loss. Best of all, unlike other services that upload your personal photos to their servers, our tool uses your browser's native Canvas API to compress images entirely locally. This guarantees 100% privacy, zero upload wait times, and no file size limits. Optimize your images for web, email, or social media today without creating an account.
+            You can drastically reduce the file size of your JPEGs, PNGs, and WebP images while maintaining excellent visual quality. Unlike other online services that force you to upload your personal photos to remote servers, our tool uses your browser's native Canvas API to compress images entirely locally. This guarantees 100% privacy, zero upload wait times, and no arbitrary file size limits. Optimize your images for the web, email attachments, or social media instantly.
           </p>
         </>
       }

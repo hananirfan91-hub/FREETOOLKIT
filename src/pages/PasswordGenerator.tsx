@@ -213,10 +213,10 @@ export default function PasswordGenerator() {
       seoIntro={
         <>
           <p className="mb-4">
-            Protect your digital identity with our <strong>strong password generator</strong>. In an era of constant data breaches, using a unique, complex password for every online account is the most effective way to secure your personal information.
+            Are you still using the same password for multiple accounts? In an era of constant data breaches, using a unique, complex password for every online account is the single most effective way to secure your personal information against hackers. Protect your digital identity today with our cryptographically secure password generator.
           </p>
           <p>
-            Our <strong>strong password generator free</strong> tool creates highly secure, random passwords instantly. You can customize the length and choose to include uppercase letters, numbers, and special characters. Most importantly, this tool uses your browser's native cryptographic API to generate passwords 100% locally. We never see, store, or transmit your generated passwords, guaranteeing absolute privacy and security without any signup or login.
+            Our tool creates highly secure, random passwords instantly. You can easily customize the length and choose whether to include uppercase letters, numbers, and special characters to meet any website's requirements. Most importantly, this utility uses your browser's native <code>window.crypto</code> API to generate passwords 100% locally. We never see, store, or transmit your generated passwords over the network, guaranteeing absolute privacy and security without any signup or login.
           </p>
         </>
       }

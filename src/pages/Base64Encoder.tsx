@@ -118,10 +118,10 @@ export default function Base64Encoder() {
       seoIntro={
         <>
           <p className="mb-4">
-            Using our <strong>base64 encode decode online</strong> tool is the fastest and most secure way to convert your text or binary data. Base64 encoding is widely used on the web to transmit data safely within URLs, email attachments, and API payloads.
+            Have you ever needed to pass complex data through a URL, embed an image directly into CSS, or prepare credentials for an API request? Base64 encoding is the standard solution for transmitting binary data safely across text-based protocols. Our browser-based Base64 encoder and decoder is the fastest and most secure way to convert your text or data.
           </p>
           <p>
-            Whether you need to quickly encode a string to hide it from casual observation, or decode a Base64 string back into readable text, our <strong>base64 encode decode online free</strong> utility handles it instantly. Because it operates entirely within your browser (client-side), you can safely process sensitive tokens, passwords, or private data without worrying about it being intercepted or stored on a remote server. No signup, no login, just instant Base64 conversion.
+            Whether you need to quickly encode a string to ensure data integrity, or decode a mysterious Base64 string back into readable text, our utility handles it instantly. Because it operates entirely within your browser (client-side), you can safely process sensitive tokens, passwords, or private data without worrying about it being intercepted or stored on a remote server. No signup, no login, just instant and private Base64 conversion.
           </p>
         </>
       }

@@ -101,10 +101,10 @@ export default function TextCaseConverter() {
       seoIntro={
         <>
           <p className="mb-4">
-            Looking for a reliable <strong>uppercase to lowercase converter</strong>? Whether you accidentally left caps lock on while typing a long document, or you need to quickly format text for a programming variable, our free online text case converter is the perfect solution.
+            Have you ever typed a long paragraph only to realize your Caps Lock key was on the entire time? Or maybe you need to quickly format a list of names or a blog post title. Our free online text case converter is the perfect solution for these common formatting headaches.
           </p>
           <p>
-            With our <strong>uppercase to lowercase converter free</strong> tool, you can instantly transform any text into UPPERCASE, lowercase, Title Case, camelCase, snake_case, and more. Because it runs entirely in your browser, your text is never uploaded to a server, ensuring complete privacy and lightning-fast conversions. No signup or login is required—just paste your text and click to convert.
+            With this utility, you can instantly transform any text into UPPERCASE, lowercase, Title Case, and more. Because it runs entirely within your web browser, your text is never uploaded to a remote server. This ensures complete privacy for your documents and emails, while providing lightning-fast conversions. No signup or login is required—just paste your text and click to convert.
           </p>
         </>
       }

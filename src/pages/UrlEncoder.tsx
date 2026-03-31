@@ -127,10 +127,10 @@ export default function UrlEncoder() {
       seoIntro={
         <>
           <p className="mb-4">
-            Use our <strong>url encode decode online</strong> utility to safely format URLs for web requests. When transmitting data over the internet, special characters like spaces, ampersands, and question marks must be encoded into a valid ASCII format to prevent errors and broken links.
+            Have you ever copied a link only to find it filled with confusing "%20" characters? Or perhaps you are a developer trying to pass complex data through a web request without breaking the link. Our browser-based URL encoder and decoder utility is designed to solve exactly these problems.
           </p>
           <p>
-            Our <strong>url encode decode online free</strong> tool allows developers and marketers to instantly convert standard text into a URL-safe format, or decode a complex URL string back into human-readable text. Because this tool runs entirely within your browser, your sensitive URLs and query parameters are never logged or stored on a remote server. Experience instant, secure, and free URL encoding with no registration needed.
+            When transmitting data over the internet, special characters like spaces, ampersands, and question marks must be encoded into a valid ASCII format. Our tool allows you to instantly convert standard text into a URL-safe format, or decode a messy URL string back into human-readable text. Because this tool runs entirely within your browser, your sensitive URLs and query parameters are never logged or stored on a remote server. Experience instant, secure, and free URL encoding with no registration needed.
           </p>
         </>
       }

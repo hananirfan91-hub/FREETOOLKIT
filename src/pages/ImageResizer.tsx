@@ -209,10 +209,10 @@ export default function ImageResizer() {
       seoIntro={
         <>
           <p className="mb-4">
-            Our free tool lets you <strong>resize image online</strong> in seconds without losing quality. Whether you are preparing photos for a blog post, adjusting an image to fit a specific social media profile picture, or creating thumbnails for an e-commerce store, getting the exact dimensions right is crucial.
+            Have you ever tried to upload a profile picture only to be told the dimensions are wrong? Or maybe you need to fit a large photograph into a specific layout on your blog. Our free tool lets you resize images in seconds without losing quality, solving these common frustrations instantly.
           </p>
           <p>
-            Using our <strong>resize image online free</strong> utility, you can easily scale your images up or down while maintaining the original aspect ratio to prevent distortion. Because the resizing process happens entirely in your web browser, your photos are never uploaded to a server. This ensures complete privacy and lightning-fast performance. Resize your JPEGs, PNGs, and WebP files instantly with no signup required.
+            Using this utility, you can easily scale your images up or down while maintaining the original aspect ratio to prevent distortion. Because the resizing process happens entirely within your web browser, your photos are never uploaded to a remote server. This ensures complete privacy for your personal images and provides lightning-fast performance. Resize your JPEGs, PNGs, and WebP files instantly with no signup required.
           </p>
         </>
       }
