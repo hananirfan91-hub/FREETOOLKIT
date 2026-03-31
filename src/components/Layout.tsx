@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'motion/react';
-import { Wrench, Menu, X, ChevronDown, Instagram, Facebook, Youtube, Share2 } from 'lucide-react';
+import { Wrench, Menu, X, ChevronDown, Instagram, Facebook, Youtube, Share2, Twitter, Linkedin, MapPin, Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Banner from './Banner';
@@ -185,6 +185,10 @@ export default function Layout() {
               <p className="text-sm leading-relaxed max-w-md">
                 A premium collection of 100% free online tools designed to help developers, designers, and everyday users with their daily tasks. No signup, no login, no hidden fees. Just fast, free utilities.
               </p>
+              <div className="mt-6 space-y-2 text-slate-400 text-sm">
+                <p className="flex items-center gap-2"><MapPin className="w-4 h-4" /> 123 Web Dev Lane, San Francisco, CA 94105, USA</p>
+                <p className="flex items-center gap-2"><Phone className="w-4 h-4" /> +1 (555) 123-4567</p>
+              </div>
             </div>
             <div>
               <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Developer Tools</h3>
@@ -230,6 +234,9 @@ export default function Layout() {
                 </a>
                 <a href="https://facebook.com/HananIrfan001" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors" aria-label="Facebook">
                   <Facebook className="w-5 h-5" />
+                </a>
+                <a href="https://x.com/hananirfan91" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors" aria-label="X (Twitter)">
+                  <Twitter className="w-5 h-5" />
                 </a>
                 <a href="https://www.youtube.com/@ancientmystery-0" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors" aria-label="YouTube">
                   <Youtube className="w-5 h-5" />

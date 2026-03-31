@@ -106,7 +106,7 @@ export default function Home() {
     <div className="min-h-screen bg-slate-50">
       <Helmet>
         <title>FreeToolKit - 100% Free Online Tools | No Signup, No Login</title>
-        <meta name="description" content="Discover FreeToolKit's premium collection of 100% free online developer and utility tools. Format JSON, compress images, generate passwords, and more without signup." />
+        <meta name="description" content="Discover FreeToolKit's 100% free online developer and utility tools. Format JSON, compress images, generate passwords, and more." />
         <meta name="keywords" content="free online tools, no signup tools, no login tools, json formatter online free, base64 encode decode online free, compress image online free, resize image online free, uppercase to lowercase converter free, word counter online free, url encode decode online free, strong password generator free, uuid generator online free, hex to rgb converter free" />
         <link rel="canonical" href="https://freetoolshub1.vercel.app/" />
 
@@ -114,16 +114,49 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://freetoolshub1.vercel.app/" />
         <meta property="og:title" content="FreeToolKit - 100% Free Online Tools | No Signup, No Login" />
-        <meta property="og:description" content="Discover FreeToolKit's premium collection of 100% free online developer and utility tools. Format JSON, compress images, generate passwords, and more without signup." />
+        <meta property="og:description" content="Discover FreeToolKit's 100% free online developer and utility tools. Format JSON, compress images, generate passwords, and more." />
         <meta property="og:site_name" content="FreeToolKit" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://freetoolshub1.vercel.app/" />
         <meta name="twitter:title" content="FreeToolKit - 100% Free Online Tools | No Signup, No Login" />
-        <meta name="twitter:description" content="Discover FreeToolKit's premium collection of 100% free online developer and utility tools. Format JSON, compress images, generate passwords, and more without signup." />
+        <meta name="twitter:description" content="Discover FreeToolKit's 100% free online developer and utility tools. Format JSON, compress images, generate passwords, and more." />
 
         {/* Structured Data / JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "FreeToolKit",
+            "url": "https://freetoolshub1.vercel.app/",
+            "logo": "https://freetoolshub1.vercel.app/favicon.svg",
+            "sameAs": [
+              "https://facebook.com/HananIrfan001",
+              "https://x.com/hananirfan91",
+              "https://instagram.com/tearswithhanan",
+              "https://www.youtube.com/@ancientmystery-0"
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "FreeToolKit",
+            "image": "https://freetoolshub1.vercel.app/favicon.svg",
+            "url": "https://freetoolshub1.vercel.app/",
+            "telephone": "+1-555-123-4567",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "123 Web Dev Lane",
+              "addressLocality": "San Francisco",
+              "addressRegion": "CA",
+              "postalCode": "94105",
+              "addressCountry": "US"
+            }
+          })}
+        </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
