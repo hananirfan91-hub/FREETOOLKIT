@@ -15,6 +15,9 @@ const UrlEncoder = React.lazy(() => import('./pages/UrlEncoder'));
 const PasswordGenerator = React.lazy(() => import('./pages/PasswordGenerator'));
 const UuidGenerator = React.lazy(() => import('./pages/UuidGenerator'));
 const ColorConverter = React.lazy(() => import('./pages/ColorConverter'));
+const ResumeBuilder = React.lazy(() => import('./pages/ResumeBuilder'));
+const PdfToWord = React.lazy(() => import('./pages/PdfToWord'));
+const WordToPdf = React.lazy(() => import('./pages/WordToPdf'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const About = React.lazy(() => import('./pages/About'));
@@ -39,6 +42,9 @@ export default function App() {
               <Route path="password-generator" element={<PasswordGenerator />} />
               <Route path="uuid-generator" element={<UuidGenerator />} />
               <Route path="color-picker" element={<ColorConverter />} />
+              <Route path="resume-builder" element={<ResumeBuilder />} />
+              <Route path="pdf-to-word" element={<PdfToWord />} />
+              <Route path="word-to-pdf" element={<WordToPdf />} />
               <Route path="blog" element={<Blog />} />
               <Route path="blog/:slug" element={<BlogPost />} />
               <Route path="about" element={<About />} />

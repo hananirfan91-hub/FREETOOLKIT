@@ -51,6 +51,9 @@ export default function Layout() {
     { name: 'Password Generator', path: '/password-generator' },
     { name: 'UUID Generator', path: '/uuid-generator' },
     { name: 'Color Picker', path: '/color-picker' },
+    { name: 'Resume Builder', path: '/resume-builder' },
+    { name: 'PDF to Word', path: '/pdf-to-word' },
+    { name: 'Word to PDF', path: '/word-to-pdf' },
   ];
 
   return (
@@ -204,8 +207,16 @@ export default function Layout() {
               <ul className="space-y-3 text-sm">
                 <li><Link to="/image-compressor" className="hover:text-indigo-400 transition-colors">Image Compressor</Link></li>
                 <li><Link to="/password-generator" className="hover:text-indigo-400 transition-colors">Password Generator</Link></li>
-                <li><Link to="/text-case-converter" className="hover:text-indigo-400 transition-colors">Case Converter</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Document Tools</h3>
+              <ul className="space-y-3 text-sm">
+                <li><Link to="/resume-builder" className="hover:text-indigo-400 transition-colors">Resume Builder</Link></li>
+                <li><Link to="/pdf-to-word" className="hover:text-indigo-400 transition-colors">PDF to Word</Link></li>
+                <li><Link to="/word-to-pdf" className="hover:text-indigo-400 transition-colors">Word to PDF</Link></li>
                 <li><Link to="/word-counter" className="hover:text-indigo-400 transition-colors">Word Counter</Link></li>
+                <li><Link to="/text-case-converter" className="hover:text-indigo-400 transition-colors">Case Converter</Link></li>
               </ul>
             </div>
             <div>

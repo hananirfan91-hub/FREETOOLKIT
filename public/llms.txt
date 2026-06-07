@@ -1,0 +1,24 @@
+# FreeToolKit
+
+> 100% Free Online Developer & Utility Tools - No Signup, No Login, 100% Secure Client-Side Computing.
+
+## Key Offerings & Tools
+All tools are processed entirely client-side inside the user's browser for maximum performance and absolute data privacy.
+
+- **JSON Formatter & Validator** (`/json-formatter`): Format, beautify, and validate complex JSON nesting schemas.
+- **Base64 Encoder / Decoder** (`/base64-encoder`): Decode or encode strings with custom parameters.
+- **Free Image Compressor** (`/image-compressor`): Compress JPEG, PNG, SVG, and GIF formats.
+- **Free Image Resizer** (`/image-resizer`): Crop, resize, and scale web media.
+- **Text Case Converter** (`/text-case-converter`): Convert titles, camelCase, snake_case, uppercase and lowercase variables.
+- **Word & Character Counter** (`/word-counter`): Count words, characters, sentences, paragraphs, and reading times.
+- **URL Encoder** (`/url-encoder`): Safe encoding and decoding of URIs and parameters.
+- **Strong Password Generator** (`/password-generator`): Local cryptographic generation of complex strings.
+- **UUID Generator** (`/uuid-generator`): Generate universally unique identifiers (UUID v4).
+- **Color Picker & Converter** (`/color-picker`): Translate colors seamlessly across HEX, RGB, and HSL formats.
+- **Modern Resume Builder** (`/resume-builder`): Compile ATS-friendly professional resumes locally.
+- **PDF to Word Converter** (`/pdf-to-word`): Extracts text locally and packages editable Word documents.
+- **Word to PDF Converter** (`/word-to-pdf`): Converts local DOCX files into portable PDF sheets.
+
+## Curated AI Resources & Strategic Guides
+- **Blog Section** (`/blog`): Practical tutorials explaining local privacy, document compilation, and asset optimization.
+- **Organic Keyword Study & Research Analysis** (`/blog/free-ai-tools-list-seo-research-directory`): This study details twenty strategic queries in the "free AI tools list" landscape featuring high authority gaps, low keyword difficulty (under thirty), and direct thematic clustering.

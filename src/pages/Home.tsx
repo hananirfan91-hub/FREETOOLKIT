@@ -15,7 +15,9 @@ import {
   Zap,
   ShieldCheck,
   CheckCircle,
-  HelpCircle
+  HelpCircle,
+  Briefcase,
+  FileUp
 } from 'lucide-react';
 
 export default function Home() {
@@ -100,28 +102,52 @@ export default function Home() {
       path: '/color-picker',
       color: 'bg-teal-50',
     },
+    {
+      id: 'resume-builder',
+      name: 'Modern Resume Builder',
+      description: 'Create professional, ATS-friendly resumes instantly. 100% free and fully client-side.',
+      icon: <Briefcase className="w-8 h-8 text-rose-500" />,
+      path: '/resume-builder',
+      color: 'bg-rose-50',
+    },
+    {
+      id: 'pdf-to-word',
+      name: 'PDF to Word Converter',
+      description: 'Securely extract text from PDF documents and convert them to editable Word files.',
+      icon: <FileUp className="w-8 h-8 text-sky-500" />,
+      path: '/pdf-to-word',
+      color: 'bg-sky-50',
+    },
+    {
+      id: 'word-to-pdf',
+      name: 'Word to PDF Converter',
+      description: 'Convert DOCX documents to portable PDF format with local privacy.',
+      icon: <FileUp className="w-8 h-8 text-emerald-500" />,
+      path: '/word-to-pdf',
+      color: 'bg-emerald-50',
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-slate-55">
       <Helmet>
-        <title>FreeToolKit - 100% Free Online Tools | No Signup, No Login</title>
-        <meta name="description" content="Discover FreeToolKit's 100% free online developer and utility tools. Format JSON, compress images, generate passwords, and more." />
-        <meta name="keywords" content="free online tools, no signup tools, no login tools, json formatter online free, base64 encode decode online free, compress image online free, resize image online free, uppercase to lowercase converter free, word counter online free, url encode decode online free, strong password generator free, uuid generator online free, hex to rgb converter free" />
+        <title>Free AI Tools List & Web Utilities | FreeToolKit</title>
+        <meta name="description" content="Discover our curated Free AI Tools List and browser-based developer utilities. High-quality guides, SEO clustering reports, and 100% offline-processed tools with no signup needed." />
+        <meta name="keywords" content="free ai tools list, best free ai tools list, local web utilities, web developers tools, json formatter online free, base64 encode decode online free, compress image online free, resize image online free, word counter online free, strong password generator free" />
         <link rel="canonical" href="https://freetoolshub1.vercel.app/" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://freetoolshub1.vercel.app/" />
-        <meta property="og:title" content="FreeToolKit - 100% Free Online Tools | No Signup, No Login" />
-        <meta property="og:description" content="Discover FreeToolKit's 100% free online developer and utility tools. Format JSON, compress images, generate passwords, and more." />
+        <meta property="og:title" content="Free AI Tools List & Web Utilities | FreeToolKit" />
+        <meta property="og:description" content="Access our curated Free AI Tools List and instant local developer converters. No login, no registration, no fee, 100% secure client-side computing." />
         <meta property="og:site_name" content="FreeToolKit" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://freetoolshub1.vercel.app/" />
-        <meta name="twitter:title" content="FreeToolKit - 100% Free Online Tools | No Signup, No Login" />
-        <meta name="twitter:description" content="Discover FreeToolKit's 100% free online developer and utility tools. Format JSON, compress images, generate passwords, and more." />
+        <meta name="twitter:title" content="Free AI Tools List & Web Utilities | FreeToolKit" />
+        <meta name="twitter:description" content="Explore our advanced Free AI Tools List along with client-side utilities. Perfect for writers, programmers, and designers." />
 
         {/* Structured Data / JSON-LD */}
         <script type="application/ld+json">
@@ -137,6 +163,20 @@ export default function Home() {
               "https://instagram.com/tearswithhanan",
               "https://www.youtube.com/@ancientmystery-0"
             ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Free AI Tools List and Web Utilities Platform",
+            "description": "An interactive environment delivering local utility resources alongside a comprehensive free AI tools list and strategic keyword clustering data.",
+            "url": "https://freetoolshub1.vercel.app/",
+            "about": {
+              "@type": "Thing",
+              "name": "Free AI Tools List",
+              "description": "A comprehensive directory indexing free artificial intelligence software products classified by operational categories like text, templates, and coding utilities."
+            }
           })}
         </script>
         <script type="application/ld+json">
@@ -187,7 +227,7 @@ export default function Home() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-slate-900 py-24 border-b border-slate-800 relative overflow-hidden">
+      <section className="bg-slate-900 py-28 border-b border-slate-800 relative overflow-hidden">
         {/* Abstract background shapes */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
           <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-indigo-600/20 blur-[120px]"></div>
@@ -201,22 +241,22 @@ export default function Home() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700 text-indigo-300 text-sm font-medium mb-8 backdrop-blur-sm"
           >
             <span className="flex h-2 w-2 rounded-full bg-green-400"></span>
-            100% Free. No Signup. No Login Required.
+            Comprehensive free AI tools list and client-side utilities with zero signups
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-8 leading-tight"
           >
-            Premium Developer <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">& Utility Tools</span>
+            Modern Free AI Tools List <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">and Daily Utilities</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed"
+            className="text-xl text-slate-350 max-w-3xl mx-auto mb-12 leading-relaxed"
           >
-            Boost your productivity with our suite of free online utilities. No registration, no login, no hidden fees. Just fast and reliable tools running entirely in your browser.
+            Our dedicated collection delivers a fully interactive, locally operated suite. Explore a comprehensive free AI tools list to accelerate content creation, image editing, and software development with ironclad client-side privacy.
           </motion.p>
         </div>
       </section>
@@ -247,6 +287,60 @@ export default function Home() {
               </Link>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Spacious Curated Free AI Tools List and Internal Links Directory */}
+      <section className="py-28 bg-slate-900 border-t border-b border-slate-800 text-white relative overflow-hidden my-16">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-indigo-200 tracking-tight mb-8">
+              The Curated Free AI Tools List for Professionals
+            </h2>
+            <p className="text-lg text-slate-300 leading-relaxed">
+              Finding a reliable, updated free AI tools list can save you hours of trial and error. To help you sort through thousands of options, our team has organized a structured directory of top-tier artificial intelligence listings.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 lg:mb-24">
+            <div className="bg-slate-800/60 rounded-3xl p-8 border border-slate-700 hover:border-indigo-500 transition-colors">
+              <h3 className="text-xl font-bold text-indigo-300 mb-4">Text and Design Resource Directories</h3>
+              <p className="text-slate-305 text-sm leading-relaxed mb-6">
+                When compiling a free AI tools list, text and layout tools consistently take the top spot. Writers looking for generating blog structure, outlines, or quick content drafts rely on these indexes to locate browser helper assistants that operate without payment options.
+              </p>
+              <p className="text-slate-305 text-sm leading-relaxed">
+                You can combine these with our browser solutions. If you find a helper in our recommended free AI tools list that outputs heavy images, use our local <Link to="/image-compressor" className="text-indigo-400 font-semibold hover:underline">Free Image Compressor</Link> or our quick offline <Link to="/image-resizer" className="text-indigo-400 font-semibold hover:underline">Image Resizer</Link> to prepare them for your website instantly.
+              </p>
+            </div>
+
+            <div className="bg-slate-800/60 rounded-3xl p-8 border border-slate-700 hover:border-indigo-500 transition-colors">
+              <h3 className="text-xl font-bold text-indigo-300 mb-4">Productivity and Interactive Models</h3>
+              <p className="text-slate-305 text-sm leading-relaxed mb-6">
+                Another key area for a modern free AI tools list is interactive workflow management. Students and business teams use specialized platforms to create slides, validate templates, or proofread application assets.
+              </p>
+              <p className="text-slate-305 text-sm leading-relaxed">
+                Our suite supports these professional workflows directly. If you are building application packages, use our built-in <Link to="/resume-builder" className="text-indigo-400 font-semibold hover:underline">Modern Resume Builder</Link> to format your background, or translate document layouts utilizing our <Link to="/pdf-to-word" className="text-indigo-400 font-semibold hover:underline">PDF to Word Converter</Link> and <Link to="/word-to-pdf" className="text-indigo-400 font-semibold hover:underline">Word to PDF Converter</Link>.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-indigo-950 to-slate-850 rounded-3xl p-8 lg:p-12 border border-indigo-800 text-center">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Explore Our Comprehensive Keywords and SEO Research Report
+            </h3>
+            <p className="text-slate-300 text-base max-w-3xl mx-auto mb-8 leading-relaxed">
+              We completed a deep analytical review on search demand, competition density, and user intent. In this study, we identified twenty strategic keywords from the primary free AI tools list landscape where top results show massive structural gaps.
+            </p>
+            <Link 
+              to="/blog/free-ai-tools-list-seo-research-directory" 
+              className="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-sm font-bold rounded-2xl text-slate-900 bg-white hover:bg-slate-100 transition-colors shadow-lg"
+            >
+              Read Free AI Tools List SEO Study
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -295,7 +389,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-slate-50 border-t border-slate-200">
+      <section className="py-24 bg-slate-50 border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-200 mb-6">
@@ -303,14 +397,14 @@ export default function Home() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-lg text-slate-600">
-              Everything you need to know about FreeToolKit and how it works.
+              Answers to common queries about our utilities and the ultimate free AI tools list research.
             </p>
           </div>
           
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
               <h3 className="text-lg font-bold text-slate-900 mb-2">Are these tools really 100% free?</h3>
-              <p className="text-slate-600">Yes! Every single tool on FreeToolKit is completely free to use. There are no premium versions, no hidden fees, and no usage limits.</p>
+              <p className="text-slate-600">Yes. Every single tool on FreeToolKit is completely free to use. There are no premium versions, no hidden fees, and no usage limits.</p>
             </div>
             
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
@@ -322,6 +416,11 @@ export default function Home() {
               <h3 className="text-lg font-bold text-slate-900 mb-2">Is my data safe when using these tools?</h3>
               <p className="text-slate-600">Absolutely. Our tools are built using modern web technologies that process your data locally in your browser. Your files, text, and images are never uploaded to our servers.</p>
             </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Where can I find a verified free AI tools list online?</h3>
+              <p className="text-slate-600">We maintain an authoritative free AI tools list analysis in our blog. It maps out twenty distinct high opportunity search queries, clustering creative, writing, and administrative models for easy navigation.</p>
+            </div>
             
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
               <h3 className="text-lg font-bold text-slate-900 mb-2">Can I use these tools on my mobile phone?</h3>
@@ -332,38 +431,43 @@ export default function Home() {
       </section>
 
       {/* Comprehensive Guide Section for SEO and Word Count */}
-      <section className="py-20 bg-white border-t border-slate-200">
+      <section className="py-24 bg-white border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="prose prose-slate lg:prose-lg mx-auto">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">Your Go-To Suite of Free Online Utilities</h2>
             
             <p className="text-slate-600 mb-6 leading-relaxed">
-              We've all been there: you need to quickly format a messy JSON file, resize an image for a blog post, or generate a secure password, but every tool you find either wants you to create an account, pay a subscription, or upload your sensitive data to their servers. That's why we built <strong>FreeToolKit</strong>. We wanted a single place where developers, designers, and everyday users could access essential utilities instantly, without any of the hassle. Every tool here runs entirely in your web browser, meaning your data stays on your device, ensuring complete privacy and lightning-fast results.
+              We have all been there. You need to quickly format a messy JSON file, resize an image for a blog post, or generate a secure password, but every tool you find either wants you to create an account, pay a subscription, or upload your sensitive data to their servers. That is why we built FreeToolKit. We wanted a single place where developers, designers, and everyday users could access essential utilities instantly, without any of the hassle. In addition to our client-side software, we maintain a comprehensive free AI tools list directory to assist in discovering external generators requiring zero financial investment. Every tool here runs entirely in your web browser, meaning your data stays on your device, ensuring complete privacy and lightning-fast results.
             </p>
 
             <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Developer Tools: Format, Encode, and Generate</h3>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              When you're deep in code, you don't have time to mess around with clunky interfaces. Our <Link to="/json-formatter" className="text-indigo-600 hover:underline">JSON formatter and validator</Link> is designed to handle large payloads instantly, turning unreadable strings into a clean, collapsible tree. Need to handle data encoding? You can securely <Link to="/base64-encoder" className="text-indigo-600 hover:underline">encode and decode Base64 strings</Link> or safely parse URL parameters without worrying about your data being logged. We also offer a <Link to="/uuid-generator" className="text-indigo-600 hover:underline">UUID v4 generator</Link> for when you need universally unique identifiers on the fly.
+              When you are deep in code, you do not have time to mess around with clunky interfaces. Our <Link to="/json-formatter" className="text-indigo-600 hover:underline">JSON formatter and validator</Link> is designed to handle large payloads instantly, turning unreadable strings into a clean, collapsible tree. Need to handle data encoding? You can securely <Link to="/base64-encoder" className="text-indigo-600 hover:underline">encode and decode Base64 strings</Link> or safely parse URL parameters without worrying about your data being logged. We also offer a <Link to="/uuid-generator" className="text-indigo-600 hover:underline">UUID v4 generator</Link> for when you need universally unique identifiers on the fly.
             </p>
 
             <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Content & Design Utilities: Optimize and Analyze</h3>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              Optimizing media for the web shouldn't require expensive software. Our <Link to="/image-compressor" className="text-indigo-600 hover:underline">free image compressor</Link> lets you shrink JPEG, PNG, and WebP files right in your browser, helping your website load faster without sacrificing quality. If you need to tweak dimensions, the <Link to="/image-resizer" className="text-indigo-600 hover:underline">image resizer</Link> makes cropping and scaling a breeze. For writers and marketers, our <Link to="/word-counter" className="text-indigo-600 hover:underline">word and character counter</Link> provides instant metrics to help you hit those strict character limits for social media or SEO meta descriptions.
+              Optimizing media for the web should not require expensive software. Our <Link to="/image-compressor" className="text-indigo-600 hover:underline">free image compressor</Link> lets you shrink JPEG, PNG, and WebP files right in your browser, helping your website load faster without sacrificing quality. If you need to tweak dimensions, the <Link to="/image-resizer" className="text-indigo-600 hover:underline">image resizer</Link> makes cropping and scaling a breeze. For writers and marketers, our <Link to="/word-counter" className="text-indigo-600 hover:underline">word and character counter</Link> provides instant metrics to help you hit those strict character limits for social media or SEO meta descriptions.
+            </p>
+
+            <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">The Convergence of Local Utilities and Curated Software Directories</h3>
+            <p className="text-slate-600 mb-6 leading-relaxed">
+              A primary benefit of keeping a verified free AI tools list alongside browser converter utilities is workflow consolidation. By using automated models to generate content and leveraging our local tools to optimize assets, digital creators produce superior products. If you are examining an API schema returned by generative platforms, pasting that schema into our browser based JSON formatter secures your proprietary structure instantly, with zero remote server hops.
             </p>
 
             <h3 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Security First: Why Browser-Based Processing Matters</h3>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              The biggest advantage of FreeToolKit isn't just that it's free—it's how it works under the hood. By leveraging modern web technologies to process everything client-side, we offer benefits that traditional server-based tools simply can't match:
+              The biggest advantage of FreeToolKit is not just that it is free, it is how it works under the hood. By leveraging modern web technologies to process everything client-side, we offer benefits that traditional server-based tools simply can not match:
             </p>
             <ul className="text-slate-600 mb-6 leading-relaxed list-disc pl-6 space-y-2">
-              <li><strong>Absolute Privacy:</strong> Whether you're using our <Link to="/password-generator" className="text-indigo-600 hover:underline">strong password generator</Link> or formatting proprietary API data, your information never leaves your computer.</li>
+              <li><strong>Absolute Privacy:</strong> Whether you are using our <Link to="/password-generator" className="text-indigo-600 hover:underline">strong password generator</Link> or formatting proprietary API data, your information never leaves your computer.</li>
               <li><strong>Zero Wait Times:</strong> There are no upload or download progress bars. Processing happens at the speed of your own device.</li>
-              <li><strong>No File Size Limits:</strong> Because you aren't uploading files to a server, you aren't restricted by arbitrary upload caps.</li>
+              <li><strong>No File Size Limits:</strong> Because you are not uploading files to a server, you are not restricted by arbitrary upload caps.</li>
               <li><strong>Always Available:</strong> Many of our tools will continue to function even if your internet connection drops after the page has loaded.</li>
             </ul>
             
             <p className="text-slate-600 mb-6 leading-relaxed font-medium text-center mt-10">
-              Bookmark FreeToolKit today. It's the fast, secure, and completely free utility belt you'll actually want to use. No signup, no login—just tools that work.
+              Bookmark FreeToolKit today. It is the fast, secure, and completely free utility belt you will actually want to use. No signup, no login, just tools that work.
             </p>
           </article>
         </div>
